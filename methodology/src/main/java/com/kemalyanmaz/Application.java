@@ -15,7 +15,7 @@ public class Application {
     	
     	
         for (int i=0;i<5;i++){
-            outputService.generateOutput("Kemal");
+            outputService.generateOutput();
             Thread.sleep(2000);
         }
     }
