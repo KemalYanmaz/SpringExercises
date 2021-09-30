@@ -3,6 +3,8 @@ package com.kemalyanmaz.service;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.kemalyanmaz.aspect.Countable;
+
 @Service
 public class OutputService {
 
@@ -17,6 +19,7 @@ public class OutputService {
         this.timeService = timeService;
     }
 
+    @Countable
     public void generateOutput(){
         String output = timeService.getCurrentTime() + " " + greetingService.getGreeting(name);
         System.out.println(output);
